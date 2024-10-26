@@ -1,11 +1,10 @@
 import * as React from "react";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"; // Ensure this utility function is correctly defined
 
-export interface InputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {}
+export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {}
 
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
-  ({ className = '', type = 'text', ...props }, ref) => { // Default className and type
+  ({ className = '', type = 'text', ...props }, ref) => {
     return (
       <input
         type={type}
